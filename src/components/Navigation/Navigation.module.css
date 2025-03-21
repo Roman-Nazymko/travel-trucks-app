@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+}
+
+.navList {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  padding: 24px 0;
+  text-decoration: none;
+  color: var(--main);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.isActive {
+  color: var(--button-hover);
+}
