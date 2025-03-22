@@ -1,0 +1,131 @@
+.imgContainer {
+  border-radius: 10px;
+  width: 292px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.costContainer {
+  width: 524px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgContainer .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.truckName {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+}
+
+.truckPrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+  margin-right: 12px;
+}
+
+.disabled {
+  width: 26px;
+  height: 24px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--main);
+}
+
+.disabled:hover {
+  fill: var(--button);
+}
+
+.active {
+  width: 26px;
+  height: 24px;
+  fill: var(--button);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+}
+
+.buttonHeart {
+  background-color: white;
+  border: none;
+  width: 26px;
+  height: 24px;
+}
+
+.iconStar {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating);
+  margin-right: 4px;
+}
+
+.rating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+}
+
+.locationContainer {
+  display: flex;
+}
+
+.iconMap {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.subContainer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.description {
+  margin-top: 24px;
+  width: 492px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  background-color: var(--button);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  background-color: var(--button-hover);
+}

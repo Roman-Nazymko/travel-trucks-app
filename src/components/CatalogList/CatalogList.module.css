@@ -1,0 +1,16 @@
+.catalogList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+}
+
+.catalogListItem {
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  background-color: var(--white);
+  display: flex;
+  gap: 24px;
+}

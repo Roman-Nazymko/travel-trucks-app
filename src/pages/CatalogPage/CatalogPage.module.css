@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 65px;
+}
+
+.catalog {
+  max-width: 1440px;
+  padding: 39px 64px 52px 64px;
+  margin: 0 auto;
+}
