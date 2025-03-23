@@ -60,7 +60,7 @@ const CatalogTruckCard = ({ truck }) => {
           </div>
           <div className={css.locationContainer}>
             <CiMap className={css.iconMap} />
-            <p className={css.location}>{location}</p>
+            <p className={css.location}>{formattedLocation}</p>
           </div>
         </div>
         <p className={css.description}>{description}</p>
