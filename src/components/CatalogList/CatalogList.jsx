@@ -4,7 +4,7 @@ import clsx from "clsx";
 import {
   selectError,
   selectLoading,
-  selectItems,
+  selectVisibleTrucks,
 } from "../../redux/trucks/selectors";
 import { activateLoader } from "../../redux/trucks/slice";
 import { selectPaginationPage } from "../../redux/pagination/selectors";
@@ -12,10 +12,12 @@ import { addValue } from "../../redux/pagination/slice";
 
 import CatalogTruckCard from "../../components/CatalogTruckCard/CatalogTruckCard";
 
+import badFilterImg from "../../assets/img/bad-filter.png";
+
 import css from "./CatalogList.module.css";
 
 const CatalogList = () => {
-  const trucks = useSelector(selectItems);
+  const trucks = useSelector(selectVisibleTrucks);
   const visibleCount = useSelector(selectPaginationPage);
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
@@ -44,19 +46,30 @@ const CatalogList = () => {
           </li>
         ))}
       </ul>
-      {visibleCount < trucks.length && (
-        <button
-          onClick={loadMore}
-          className={clsx(
-            visibleCount >= trucks.length ? css.disLoadMore : css.loadMore
-          )}
-          disabled={loading}
-        >
-          Load more
-        </button>
-      )}
 
       {error && <Toaster />}
+
+      {trucks.length === 0 && !loading && !error ? (
+        <div className={css.badFilter}>
+          <img
+            className={css.badFilterImg}
+            src={badFilterImg}
+            alt="No results"
+          />
+        </div>
+      ) : (
+        visibleCount < trucks.length && (
+          <button
+            onClick={loadMore}
+            className={clsx(
+              visibleCount >= trucks.length ? css.disLoadMore : css.loadMore
+            )}
+            disabled={loading}
+          >
+            Load more
+          </button>
+        )
+      )}
     </>
   );
 };

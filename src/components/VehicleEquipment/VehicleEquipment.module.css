@@ -1,0 +1,86 @@
+.equipmentTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-light);
+  margin-bottom: 24px;
+}
+
+.filterText {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.customCheckbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.customCheckboxContainer {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 112px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.checkboxContainers {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  row-gap: 8px;
+}
+
+.checkboxIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--main);
+}
+
+.checkboxText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--main);
+}
+
+.checkboxText::first-letter {
+  text-transform: uppercase;
+}
+
+.checkboxInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.customCheckboxWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.customCheckboxContainer:hover {
+  border-color: var(--button-hover);
+}
+
+.checkboxInput:checked + .customCheckboxContainer {
+  border-color: var(--button-hover);
+}

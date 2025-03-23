@@ -1,5 +1,3 @@
-import { FaHandHoldingWater } from "react-icons/fa";
-import { FaFireBurner } from "react-icons/fa6";
 import {
   BsCupHot,
   BsDiagram3,
@@ -9,29 +7,14 @@ import {
   BsGrid,
   BsGrid1X2,
   BsGrid3X3Gap,
-  BsUiRadios,
   BsWind,
 } from "react-icons/bs";
-import { TbFridge, TbMicrowave } from "react-icons/tb";
 import { CiGrid32 } from "react-icons/ci";
 
 import css from "./Category.module.css";
 
 const Category = ({ truckInfo }) => {
-  const {
-    transmission,
-    engine,
-    AC,
-    kitchen,
-    refrigerator,
-    radio,
-    bathroom,
-    microwave,
-    TV,
-    gas,
-    water,
-    form,
-  } = truckInfo;
+  const { transmission, engine, AC, kitchen, bathroom, TV, form } = truckInfo;
 
   return (
     <ul className={css.categoryList}>
@@ -80,46 +63,16 @@ const Category = ({ truckInfo }) => {
           <p className={css.categoryText}>Kitchen</p>
         </li>
       )}
-      {refrigerator && (
-        <li className={css.category}>
-          <TbFridge className={css.iconCategory} />
-          <p className={css.categoryText}>Refrigerator</p>
-        </li>
-      )}
-      {radio && (
-        <li className={css.category}>
-          <BsUiRadios className={css.iconCategory} />
-          <p className={css.categoryText}>Radio</p>
-        </li>
-      )}
       {bathroom && (
         <li className={css.category}>
           <BsDroplet className={css.iconCategory} />
           <p className={css.categoryText}>Bathroom</p>
         </li>
       )}
-      {microwave && (
-        <li className={css.category}>
-          <TbMicrowave className={css.iconCategory} />
-          <p className={css.categoryText}>Microwave</p>
-        </li>
-      )}
       {TV && (
         <li className={css.category}>
           <BsDisplay className={css.iconCategory} />
           <p className={css.categoryText}>TV</p>
-        </li>
-      )}
-      {gas && (
-        <li className={css.category}>
-          <FaFireBurner className={css.iconCategory} />
-          <p className={css.categoryText}>Gas</p>
-        </li>
-      )}
-      {water && (
-        <li className={css.category}>
-          <FaHandHoldingWater className={css.iconCategory} />
-          <p className={css.categoryText}>Water</p>
         </li>
       )}
     </ul>
