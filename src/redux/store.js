@@ -15,6 +15,7 @@ import allTrucksReducer from "./trucks/slice.js";
 import favoriteReducer from "./favorites/slice";
 import filterReducer from "./filters/slice";
 import paginationReducer from "./pagination/slice";
+import truckReducer from "./truck/slice";
 
 const favoritePersistConfig = {
   key: "favoriteTrucks",
@@ -33,6 +34,7 @@ export const store = configureStore({
     favorite: persistFavoriteReducer,
     filter: filterReducer,
     pagination: paginationReducer,
+    truck: truckReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

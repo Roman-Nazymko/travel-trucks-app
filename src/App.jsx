@@ -6,6 +6,9 @@ import Loader from "./components/Loader/Loader";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
+const DetailsTruckPage = lazy(() =>
+  import("./pages/DetailsTruckPage/DetailsTruckPage")
+);
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 function App() {
@@ -16,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:truckId" element={<DetailsTruckPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

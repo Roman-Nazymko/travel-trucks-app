@@ -1,0 +1,116 @@
+.truckInfoSection {
+  max-width: 1440px;
+  padding: 48px 64px 80px 64px;
+  margin: 0 auto;
+}
+
+.truckName {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--main);
+}
+
+.iconStar {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating);
+  margin-right: 4px;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+}
+.rating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.locationContainer {
+  display: flex;
+}
+
+.iconMap {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.subContainer {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.truckPrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--main);
+  margin-right: 12px;
+}
+
+.truckInfoContainer {
+  margin-bottom: 28px;
+}
+
+.galleryList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.galleryListItem {
+  border-radius: 10px;
+  width: 292px;
+  height: 312px;
+  overflow: hidden;
+}
+
+.truckImg {
+  width: 300px;
+  height: 330px;
+  object-fit: cover;
+}
+
+.textDescriprion {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 60px;
+}
+
+.listLinks {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid var(--gray-light);
+  padding: 0px 0px 24px 0px;
+  margin-bottom: 56px;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  text-decoration: none;
+  border-bottom: 5px solid var(--button);
+  padding-bottom: 22px;
+}
