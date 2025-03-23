@@ -1,16 +1,29 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import clsx from "clsx";
 import { BsSuitHeart } from "react-icons/bs";
 import { HiStar } from "react-icons/hi";
 import { CiMap } from "react-icons/ci";
+
+import { selectIsFavoriteId } from "../../redux/favorites/selectors";
+import { toggleFavoriteTruck } from "../../redux/favorites/slice";
 
 import Category from "../Category/Category";
 
 import css from "./CatalogTruckCard.module.css";
 
 const CatalogTruckCard = ({ truck }) => {
+  const favorite = useSelector(selectIsFavoriteId);
+  const dispatch = useDispatch();
+  const handleIsFavorite = () => {
+    dispatch(toggleFavoriteTruck({ id: truck.id }));
+  };
+
   const { name, price, rating, location, description, reviews, gallery, id } =
     truck;
+
+  const formattedLocation = location.split(", ").reverse().join(", ");
+
   return (
     <>
       <div className={css.imgContainer}>
@@ -20,9 +33,21 @@ const CatalogTruckCard = ({ truck }) => {
         <div className={css.costContainer}>
           <h2 className={css.truckName}>{name}</h2>
           <div className={css.priceContainer}>
-            <h2 className={css.truckPrice}>€{price}</h2>
-            <button type="button" className={css.buttonHeart}>
-              <BsSuitHeart />
+            <h2 className={css.truckPrice}>{`€ ${Number(price).toFixed(
+              2
+            )}`}</h2>
+            <button
+              onClick={handleIsFavorite}
+              type="button"
+              className={css.buttonHeart}
+            >
+              <BsSuitHeart
+                className={clsx(
+                  favorite.some((item) => item.id === id)
+                    ? css.active
+                    : css.disabled
+                )}
+              />
             </button>
           </div>
         </div>
