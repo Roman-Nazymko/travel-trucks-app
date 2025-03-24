@@ -1,0 +1,24 @@
+.reactDatepicker {
+  border-radius: 12px;
+  padding: 18px 18px 18px 18px;
+  width: 527px;
+  height: 60px;
+  background-color: var(--inputs);
+  margin-bottom: 14px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.error {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--button-hover);
+}

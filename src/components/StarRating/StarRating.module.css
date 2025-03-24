@@ -1,0 +1,17 @@
+.yellow {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating);
+}
+
+.grey {
+  width: 16px;
+  height: 16px;
+  fill: var(--badges);
+}
+
+.listStar {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}

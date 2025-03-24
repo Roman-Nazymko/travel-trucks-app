@@ -1,0 +1,53 @@
+.reviewsContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  list-style: none;
+  width: 631px;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 172px;
+  height: 60px;
+  margin-bottom: 16px;
+}
+
+.logoName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: var(--badges);
+}
+
+.logoNameLetter {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--button);
+}
+
+.textName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  margin-bottom: 4px;
+}
+
+.textComment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}

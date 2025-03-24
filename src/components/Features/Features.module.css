@@ -1,0 +1,31 @@
+.featuresContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.featuresInfo {
+  border-radius: 10px;
+  padding: 44px 52px;
+  width: 631px;
+  background-color: var(--inputs);
+}
+
+.featuresCategory {
+  display: flex;
+  flex-wrap: wrap;
+  width: 527px;
+}
+
+.characteristics {
+  margin-top: 100px;
+}
+
+.subTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  padding: 0px 0px 24px 0px;
+  border-bottom: 1px solid var(--gray-light);
+  margin-bottom: 24px;
+}
