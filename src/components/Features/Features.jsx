@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { selectTruckItems } from "../../redux/truck/selectors";
 
 import BookingForm from "../BookingForm/BookingForm";
-import Category from "../Category/Category";
+import CategoryDetails from "../CategoryDetails/CategoryDetails";
 import VehicleDetails from "../VehicleDetails/VehicleDetails";
 
 import css from "./Features.module.css";
@@ -13,7 +13,7 @@ const Features = () => {
   return (
     <div className={css.featuresContainer}>
       <div className={css.featuresInfo}>
-        <Category truckInfo={truckInfo} />
+        <CategoryDetails truckInfo={truckInfo} />
         <div className={css.characteristics}>
           <h2 className={css.subTitle}>Vehicle details</h2>
           <VehicleDetails truckInfo={truckInfo} />
