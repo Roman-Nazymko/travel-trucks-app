@@ -29,7 +29,13 @@ const Calendar = ({ name }) => {
           setFieldValue(name, dates);
         }}
       />
-      {error && <div className={css.error}>{meta.error}</div>}
+      {error && (
+        <div className={css.error}>
+          {Array.isArray(meta.error)
+            ? meta.error.find((msg) => msg !== "Required") || "Required"
+            : meta.error}
+        </div>
+      )}
     </div>
   );
 };

@@ -48,3 +48,100 @@ img {
 .overflowHidden {
   overflow: hidden;
 }
+
+.react-datepicker {
+  border: 1px solid var(--text) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.react-datepicker-popper .react-datepicker__triangle {
+  fill: var(---text) !important;
+  stroke: var(--text) !important;
+}
+
+.react-datepicker__header {
+  background-color: #fff !important;
+  border-color: var(--text) !important;
+  padding: 12px !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.react-datepicker__current-month {
+  font-family: "Inter", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--main) !important;
+  text-align: center !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 12px !important;
+  top: 7px !important;
+}
+
+.react-datepicker__navigation--next {
+  right: 12px !important;
+  top: 7px !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: var(--text) !important;
+  border-width: 2px 2px 0 0;
+}
+
+.react-datepicker__navigation:hover *::before {
+  border-color: var(--gray) !important;
+}
+.react-datepicker__day-names {
+  margin-top: 14px !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.react-datepicker__day-name {
+  font-family: "Inter", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.16 !important;
+  color: var(--text) !important;
+  text-transform: uppercase;
+}
+
+.react-datepicker__day {
+  font-family: "Inter", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--main) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  margin: 2px !important;
+  border-radius: 50% !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--text) !important;
+  color: var(--white) !important;
+}
+
+.react-datepicker__day--in-range {
+  background-color: var(--text) !important;
+  color: var(--white) !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--gray) !important;
+  color: var(--white) !important;
+}
+
+.react-datepicker__day--outside-month,
+.react-datepicker__day--disabled {
+  color: var(--gray) !important;
+  pointer-events: none !important;
+}
